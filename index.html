@@ -52,7 +52,9 @@
   <script type="text/javascript">
 
   var correctCaptcha = function(response) {
-        alert(response);
+        if (response.length != 0) {
+          window.location.replace("http://www.w3schools.com");
+        }
     };
 
 </script>
