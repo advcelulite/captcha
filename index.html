@@ -53,10 +53,11 @@
 
   var response = grecaptcha.getResponse();
 
-  if(response.length != 0)
-    window.location.replace("http://www.w3schools.com");
+  if(response.length == 0)
+    console.log("aaaaaaaaaaaaaaaaaa")
 
-    
+  else
+    window.location.replace("http://www.w3schools.com");
 
 </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
