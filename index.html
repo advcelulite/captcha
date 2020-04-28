@@ -34,7 +34,7 @@
   <p>Marque a caixa de seleção "Não sou um robô" que será direcionado(a) logo em seguida.</p>
   <div class="container mx-auto mt-5" style="width:fit-content">
       <form id="cap" action="" method="POST">
-        <div class="g-recaptcha" data-sitekey="6LfZfO8UAAAAABTnkWJIXjM066A5EDE-WFxuydyS"></div>
+        <div class="g-recaptcha" data-callback="correctCaptcha" data-sitekey="6LfZfO8UAAAAABTnkWJIXjM066A5EDE-WFxuydyS"></div>
       </form>
 
   </div>
@@ -51,13 +51,9 @@
   </script>
   <script type="text/javascript">
 
-  var response = grecaptcha.getResponse();
-
-  if(response.length == 0)
-    console.log("aaaaaaaaaaaaaaaaaa")
-
-  else
-    window.location.replace("http://www.w3schools.com");
+  var correctCaptcha = function(response) {
+        alert(response);
+    };
 
 </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
