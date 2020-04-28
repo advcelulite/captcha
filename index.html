@@ -41,20 +41,20 @@
  
   
 
-  
-  
-
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
     async defer>
   </script>
+
   <script type="text/javascript">
 
-  var correctCaptcha = function(response) {
-        if (response.length != 0) {
-          window.location.replace("https://vivasemcelulite.com");
-        }
+    var query = location.search.slice(1);
+
+    var correctCaptcha = function(response) {
+          if (response.length != 0) {
+            window.location.replace(query);
+          }
     };
 
 </script>
