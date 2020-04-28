@@ -6,29 +6,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+  <style type="text/css">
+    #cap{
+      margin-top: 10px;
+    }
+
+    p{
+      text-align: center;
+      font-size: 1em;
+      color: #828282;
+      margin-top: 30px;
+    }
+
+  </style>
 </head>
 <body>
 
+ 
+  <div class="container mx-auto mt-5" style="width:fit-content">
 
-  <div class="container mx-auto">
-    <img class="img-fluid  mx-auto" src="seguro.png">
+    <div class="mx-auto" style="width:fit-content">
+      <img src="seguro.png" class="img-fluid mt-4 " alt="Responsive image" > 
+    </div>
   </div>
+  <p>Marque a caixa de seleção "Não sou um robô" que será direcionado(a) logo em seguida.</p>
+  <div class="container mx-auto mt-5" style="width:fit-content">
+      <form id="cap" action="" method="POST">
+        <div class="g-recaptcha" data-sitekey="6LfZfO8UAAAAABTnkWJIXjM066A5EDE-WFxuydyS"></div>
+      </form>
 
-  <form action="grecaptcha.getResponse(opt_widget_id)" method="POST">
-      <div class="g-recaptcha" data-sitekey="6LfZfO8UAAAAABTnkWJIXjM066A5EDE-WFxuydyS"></div>
-      <br/>
-      
-    </form>
+  </div>
+ 
+  
+
+  
+  
 
 
 
-    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
     async defer>
-</script>
+  </script>
   <script type="text/javascript">
-  var onloadCallback = function() {
-    alert("grecaptcha is ready!");
-  };
+    
+
+  var teste = grecaptcha.getResponse(cap);
 </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
